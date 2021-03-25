@@ -3,18 +3,23 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Obstacle
+  - ObstacleHit
+  - Bullet
+  - Road
+  - BackgroudPlane
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Obstacle
+  - ObstacleHit
+  - Bullet
+  - Finish
   - 
   - 
   - 
