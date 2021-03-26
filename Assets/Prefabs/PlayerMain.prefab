@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7381978186146900558
 Transform:
   m_ObjectHideFlags: 0
@@ -75,14 +75,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  speed: 50
-  minimumSize: 0
+  speed: 75
+  minimumSize: 20
   maxSize: 100
-  maxTime: 100
-  bulletSpeed: 0
+  maxTime: 10
+  bulletSpeed: 75
   scale: {x: 0, y: 0, z: 0}
   playerObject: {fileID: 2017156822170396363}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1060615588770816731, guid: 55b30632044a7ba44ae5f2f763ec8f5c, type: 3}
   roadObject: {fileID: 0}
   startButton: {fileID: 0}
   joystickGameObject: {fileID: 0}
@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 2017156822170396361}
   - component: {fileID: 2017156822170396360}
   - component: {fileID: 4732088212814636926}
+  - component: {fileID: 1625427515}
   m_Layer: 3
   m_Name: PlayerBall
   m_TagString: Player
@@ -178,7 +179,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017156822170396363}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 662e067d03434c04a862acad35cf2fe3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -196,15 +197,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93dfe2c862df912478e72d69d1134996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerMasksForCollisions: []
+  layerMasksForCollisions:
+  - serializedVersion: 2
+    m_Bits: 1088
+  - serializedVersion: 2
+    m_Bits: 64
+  - serializedVersion: 2
+    m_Bits: 128
   finishMask:
     serializedVersion: 2
     m_Bits: 512
   groundChecker: {fileID: 941272472340947552}
-  finishChecker: {fileID: 7381978186146900558}
-  checkGroundRadius: 0.4
-  bounceForce: 100
-  fallingSpeed: -5
+  checkGroundRadius: 5
+  bounceForce: 50
+  fallingSpeed: -100
+--- !u!54 &1625427515
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017156822170396363}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1
 --- !u!1 &3845996419388319006
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +251,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3845996419388319006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.509, z: 0}
+  m_LocalPosition: {x: 0, y: -0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2017156822170396367}

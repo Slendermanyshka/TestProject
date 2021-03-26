@@ -105,7 +105,7 @@ joystick = joystickGameObject.GetComponent<Joystick>();
                     }
                 case false:
                     {
-                    transform.Translate(new Vector3(-speed*Time.deltaTime,0,joystick.Horizontal/2));
+                    transform.Translate(new Vector3(-speed*Time.deltaTime,0,joystick.Horizontal/3));
                     break;
                     }
             }

@@ -43,8 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5a4ffd5d214d242b222afcb8715b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfObstacles: 100
-  size: {x: 700, y: 10, z: 250}
-  center: {x: -50, y: 4, z: 0}
+  numberOfObstacles: 250
+  size: {x: 750, y: 10, z: 250}
+  center: {x: -88.1, y: 4, z: 0}
   gizmoColor: {r: 0.24705882, g: 0, b: 0, a: 1}
   obstaclePrefab: {fileID: 2514248028311848329, guid: 65663279c64b6534a9c4af68924f5a3d, type: 3}
