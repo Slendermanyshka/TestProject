@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfObstacles: 100
-  size: {x: 800, y: 10, z: 350}
+  size: {x: 700, y: 10, z: 250}
   center: {x: -50, y: 4, z: 0}
   gizmoColor: {r: 0.24705882, g: 0, b: 0, a: 1}
-  obstaclePrefab: {fileID: 7600174699554150815, guid: 65663279c64b6534a9c4af68924f5a3d, type: 3}
+  obstaclePrefab: {fileID: 2514248028311848329, guid: 65663279c64b6534a9c4af68924f5a3d, type: 3}

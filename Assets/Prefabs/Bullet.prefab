@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1060615588770816731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 380.8, y: 27.21, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_LocalScale: {x: 88.399956, y: 88.399956, z: 88.399956}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -110,9 +110,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 8496427005657896420, guid: 19c6abe110b9ca44b995c1ec534fea40, type: 3}
-  sizeOfBall: {x: 10, y: 10, z: 10}
-  explosionRadius: 1
-  speedOfBullet: 10
+  explosionRadius: 100
+  explosionMultiplier: 2.5
+  changeColor: {r: 0.754717, g: 0, b: 0, a: 0}
 --- !u!54 &1060615588770816726
 Rigidbody:
   m_ObjectHideFlags: 0

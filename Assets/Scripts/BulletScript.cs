@@ -6,27 +6,18 @@ public class BulletScript : MonoBehaviour
 {
 
     public GameObject explosionEffect;
-    public Vector3 sizeOfBall;
     public float explosionRadius;
-    public float speedOfBullet = 10f;
+    public float explosionMultiplier;
     public Color changeColor;
 
-    private Rigidbody rb;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        rb = GetComponent<Rigidbody>();
-        transform.localScale = sizeOfBall;
-        rb.velocity = new Vector3(-speedOfBullet, 0, 0);
+        transform.localScale = new Vector3(explosionRadius,explosionRadius,explosionRadius);
     }
 
-   
 
-
-
-    //Stuff that's being called on collision
+    //Collision detection and layer filtering
     private void OnCollisionEnter(Collision other)
     {
         switch (other.gameObject.layer)
@@ -36,58 +27,65 @@ public class BulletScript : MonoBehaviour
                     //do an explosion vfx
                     GameObject exp = Instantiate(explosionEffect, transform.position, Quaternion.identity);
                     Destroy(exp, 2f);
-                    
-                    //do stuff in a certain radius
-                    radiusColor();
                     Destroy(this.gameObject);
-
+                    //do stuff to change color and tag
+                    radiusColor();
                     break;
                 }
             case 7:
                 {
-                    Physics.IgnoreCollision(this.GetComponent<Collider>(),other.gameObject.GetComponent<Collider>());
+
+                    Physics.IgnoreCollision(this.GetComponent<Collider>(), other.gameObject.GetComponent<Collider>());
+                    break;
+                }
+            case 9:
+                {
+                    GameObject exp = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+                    Destroy(exp, 2f);
+                    Destroy(this.gameObject);
+                    //do stuff to change color and tag
+                    radiusColor();
+                    break;
+                }
+            default:
+                {
+                   // Destroy(this.gameObject);
                     break;
                 }
         }
-       
-            
-        
-       
-
-
     }
-
-
 
     //calculations for the objects in radius
     private void radiusColor()
     {
-        Collider[] other = Physics.OverlapSphere(transform.position,explosionRadius);
-        foreach(Collider nearby in other)
-        {
+        //storing colliders in radius in an array
+      Collider[] other = Physics.OverlapSphere(transform.position, explosionRadius*explosionMultiplier);
 
+        //doing stuff to each collider in array
+      foreach (Collider nearby in other)
+        {
             GameObject gOther = nearby.gameObject;
-            if (gOther != null && gOther.tag == "Obstacle")
+
+            //filtering tags for coloring
+            if (gOther != null && gOther.tag == "Obstacle" && gOther.tag!="Bullet" )
+             {
+                 coloringProcess(gOther);
+             }
+            else if (gOther!=null && gOther.tag == "Finish")
             {
-                coloringProcess(gOther);
 
             }
+
         }
-
-
     }
 
-
+    //method for coloring and chacnhing tag and layer
     private void coloringProcess(GameObject other)
     {
-        if (other.tag == "Obstacle")
-        {
             other.GetComponent<MeshRenderer>().material.color = changeColor;
             other.gameObject.tag = "ObstacleHit";
             other.gameObject.layer = 7;
-        }
     }
-
 
 
 }
