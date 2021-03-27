@@ -1,5 +1,48 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &6810585975598052415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6768891770807603950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjectOffset: {x: -28.03, y: 111.80459, z: 253.74869}
+  m_LookaheadTime: 0
+  m_LookaheadSmoothing: 0
+  m_LookaheadIgnoreY: 0
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
+  m_TargetMovementOnly: 1
+  m_ScreenX: 0.5
+  m_ScreenY: 0.5
+  m_CameraDistance: 46.8
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
+  m_DeadZoneDepth: 0
+  m_UnlimitedSoftZone: 0
+  m_SoftZoneWidth: 0.8
+  m_SoftZoneHeight: 0.8
+  m_BiasX: 0
+  m_BiasY: 0
+  m_CenterOnActivate: 1
+  m_GroupFramingMode: 2
+  m_AdjustmentMode: 0
+  m_GroupFramingSize: 0.8
+  m_MaxDollyIn: 5000
+  m_MaxDollyOut: 5000
+  m_MinimumDistance: 1
+  m_MaximumDistance: 5000
+  m_MinimumFOV: 3
+  m_MaximumFOV: 60
+  m_MinimumOrthoSize: 1
+  m_MaximumOrthoSize: 5000
 --- !u!1 &6810585974992390697
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,49 +159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dc6791c4be7e424498d4cff97aebdec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6810585975598052415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6768891770807603950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: -78.93733, y: 111.80459, z: 253.74869}
-  m_LookaheadTime: 0
-  m_LookaheadSmoothing: 0
-  m_LookaheadIgnoreY: 0
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
-  m_TargetMovementOnly: 1
-  m_ScreenX: 0.5
-  m_ScreenY: 0.5
-  m_CameraDistance: 46.8
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0
-  m_DeadZoneDepth: 0
-  m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
-  m_BiasX: 0
-  m_BiasY: 0
-  m_CenterOnActivate: 1
-  m_GroupFramingMode: 2
-  m_AdjustmentMode: 0
-  m_GroupFramingSize: 0.8
-  m_MaxDollyIn: 5000
-  m_MaxDollyOut: 5000
-  m_MinimumDistance: 1
-  m_MaximumDistance: 5000
-  m_MinimumFOV: 3
-  m_MaximumFOV: 60
-  m_MinimumOrthoSize: 1
-  m_MaximumOrthoSize: 5000
 --- !u!1 &6810585975598316732
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6810585976073287993}
   m_LocalRotation: {x: 0.19190772, y: -0.68122727, z: 0.192313, w: 0.67979157}
-  m_LocalPosition: {x: 141.0368, y: -22.7594, z: -190.6552}
+  m_LocalPosition: {x: 221.0368, y: -22.7594, z: -190.6552}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6810585975598316723}
@@ -333,31 +333,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 246537924056596656, guid: 032fd0fc56e6d7a43b2e2c33f9777f2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -77.79999
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 246537924056596656, guid: 032fd0fc56e6d7a43b2e2c33f9777f2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 214.00002
+      value: 166.9
       objectReference: {fileID: 0}
     - target: {fileID: 246537924056596656, guid: 032fd0fc56e6d7a43b2e2c33f9777f2d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 82.28551
+      value: 18.9
       objectReference: {fileID: 0}
     - target: {fileID: 246537924056596656, guid: 032fd0fc56e6d7a43b2e2c33f9777f2d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.30286044
+      value: -0.36890915
       objectReference: {fileID: 0}
     - target: {fileID: 246537924056596656, guid: 032fd0fc56e6d7a43b2e2c33f9777f2d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.12310045
+      value: -0.14731035
       objectReference: {fileID: 0}
     - target: {fileID: 246537924056596656, guid: 032fd0fc56e6d7a43b2e2c33f9777f2d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8754945
+      value: 0.8522811
       objectReference: {fileID: 0}
     - target: {fileID: 246537924056596656, guid: 032fd0fc56e6d7a43b2e2c33f9777f2d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.35585293
+      value: -0.34032723
       objectReference: {fileID: 0}
     - target: {fileID: 246537924056596656, guid: 032fd0fc56e6d7a43b2e2c33f9777f2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -389,7 +389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 246537924056596659, guid: 032fd0fc56e6d7a43b2e2c33f9777f2d, type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 80
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 246537924329049817, guid: 032fd0fc56e6d7a43b2e2c33f9777f2d, type: 3}
       propertyPath: m_TrackedObjectOffset.x

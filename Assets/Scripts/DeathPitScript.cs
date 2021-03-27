@@ -6,7 +6,11 @@ public class DeathPitScript : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Object.Destroy(other);
-        SceneManager.LoadScene(0);
+       if (other.gameObject.tag == "Player")
+        {
+            other.GetComponent<PlayerMovement>().DeathSequence();
+        }
+        else { return; }
+
     }
 }

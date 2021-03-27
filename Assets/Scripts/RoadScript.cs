@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class RoadScript : MonoBehaviour
 {
+    private void Start()
+    {
+
+    }
 
     public void ChangeSizeOfRoad(float roadSizeFloat)
     {
-        transform.localScale = new Vector3(93,1,roadSizeFloat);
+        transform.localScale = new Vector3(transform.localScale.x, 1, roadSizeFloat);
+
     }
 }

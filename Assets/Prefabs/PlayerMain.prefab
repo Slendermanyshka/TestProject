@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1511381491099100012
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7381978186146900558}
-  m_Layer: 3
-  m_Name: DoorChecker
-  m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &7381978186146900558
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511381491099100012}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2017156822170396367}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2017156821612163035
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,13 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9701cfc6ff2e71540b1fa0ce1156c7e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   speed: 75
-  minimumSize: 20
-  maxSize: 100
   maxTime: 10
   bulletSpeed: 75
-  scale: {x: 0, y: 0, z: 0}
   playerObject: {fileID: 2017156822170396363}
   bulletPrefab: {fileID: 1060615588770816731, guid: 55b30632044a7ba44ae5f2f763ec8f5c, type: 3}
   roadObject: {fileID: 0}
@@ -95,10 +62,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2017156822170396367}
+  - component: {fileID: 4732088212814636926}
   - component: {fileID: 2017156822170396366}
   - component: {fileID: 2017156822170396361}
   - component: {fileID: 2017156822170396360}
-  - component: {fileID: 4732088212814636926}
   - component: {fileID: 1625427515}
   m_Layer: 3
   m_Name: PlayerBall
@@ -119,10 +86,35 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 941272472340947552}
-  - {fileID: 7381978186146900558}
   m_Father: {fileID: 2017156821612163033}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4732088212814636926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017156822170396363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93dfe2c862df912478e72d69d1134996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMasksForCollisions:
+  - serializedVersion: 2
+    m_Bits: 1024
+  - serializedVersion: 2
+    m_Bits: 64
+  - serializedVersion: 2
+    m_Bits: 128
+  - serializedVersion: 2
+    m_Bits: 512
+  groundChecker: {fileID: 941272472340947552}
+  checkGroundRadius: 10
+  bounceForce: 50
+  fallingSpeed: -100
+  deathText: {fileID: 0}
 --- !u!33 &2017156822170396366
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -185,32 +177,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4732088212814636926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017156822170396363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93dfe2c862df912478e72d69d1134996, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layerMasksForCollisions:
-  - serializedVersion: 2
-    m_Bits: 1088
-  - serializedVersion: 2
-    m_Bits: 64
-  - serializedVersion: 2
-    m_Bits: 128
-  finishMask:
-    serializedVersion: 2
-    m_Bits: 512
-  groundChecker: {fileID: 941272472340947552}
-  checkGroundRadius: 5
-  bounceForce: 50
-  fallingSpeed: -100
 --- !u!54 &1625427515
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -251,7 +217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3845996419388319006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.55, z: 0}
+  m_LocalPosition: {x: 0, y: -0.453, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2017156822170396367}

@@ -49,7 +49,7 @@ public class BulletScript : MonoBehaviour
                 }
             default:
                 {
-                   // Destroy(this.gameObject);
+                    Destroy(this.gameObject);
                     break;
                 }
         }
@@ -67,7 +67,7 @@ public class BulletScript : MonoBehaviour
             GameObject gOther = nearby.gameObject;
 
             //filtering tags for coloring
-            if (gOther != null && gOther.tag == "Obstacle" && gOther.tag!="Bullet" )
+            if (gOther != null && gOther.tag == "Obstacle" && gOther.tag!="Bullet" && gOther.tag != "Player")
              {
                  coloringProcess(gOther);
              }

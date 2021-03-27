@@ -4,11 +4,16 @@ using System.Collections;
 
 public class FinishScript : MonoBehaviour
 {
+
+    [SerializeField] GameObject winText;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag=="Player")
         {
+            other.GetComponentInParent<PlayerGeneralController>().joystickGameObject.SetActive(false);
+            other.GetComponentInParent<PlayerGeneralController>().StopMoving();
             StartCoroutine(WinninCoroutine(other));
+
         }
     }
 
@@ -17,16 +22,12 @@ public class FinishScript : MonoBehaviour
         GetComponent<Animation>().Play();
     }
 
-
     IEnumerator WinninCoroutine(Collider other) 
     {
-        openDoorAnim();
+        winText.SetActive(true);
         other.GetComponent<Rigidbody>().Sleep();
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(0);
 
     }
-
-
-
 }
